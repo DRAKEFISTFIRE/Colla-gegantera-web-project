@@ -1,0 +1,118 @@
+@import "tailwindcss";
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.3);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 80%;
+    background-image: url('../images/fondo1.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    z-index: -1;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.content {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeInContent 1.5s ease-out forwards;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out 1s forwards;
+    line-height: 1.3;
+}
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro:hover .image-overlay {
+    filter: brightness(0.7);
+}
+
+.text:hover {
+    transform: scale(1.05);
+    color: #ff0000;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+body {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
