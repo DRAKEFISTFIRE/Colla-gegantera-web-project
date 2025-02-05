@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.jpeg" type="image/jpeg">
+    <title>Colla Gegantera Cor de Maria - Inici</title>
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <audio id="audio" loop muted>
+        <source src="images/bequetero.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            audio.play().then(function() {
+                audio.muted = false;
+            }).catch(function(error) {
+                console.log('Error al intentar reproducir el audio:', error);
+            });
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = 'menu.html';
+            }
+        });
+    </script>
+
+    <section class="intro">
+        <video autoplay muted loop id="background-video">
+            <source src="images/VID-20241123-WA0056_muted.mp4" type="video/mp4">
+        </video>
+        <div class="image-overlay"></div>
+        <div class="content">
+            <div class="text">
+                <p>Prem Enter per entrar</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacte - Cor de Maria</title>    <link rel="icon" href="images/favicon.jpeg" type="image/jpeg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .navbar {
+        background-color: #d32f2f;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 9999;
+      }
+  
+      .navbar a {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+  
+      .navbar a:hover {
+        color: #c62828;
+      }
+  
+      .container {
+        margin-top: 130px; /* Evitem que el formulari estigui cobert per la navbar */
+        padding: 25px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 600px; /* Reduïm l'amplada màxima */
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      h1 {
+        color: #d32f2f;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.6rem;
+        height: 120px;
+      }
+  
+      .form-control {
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s ease;
+      }
+  
+      .form-control:focus {
+        border-color: #d32f2f;
+      }
+  
+      .btn-submit {
+        background-color: #d32f2f;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 1rem;
+        width: 100%;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .btn-submit:hover {
+        background-color: #c62828;
+      }
+  
+      .form-group label {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+  
+      footer {
+        background-color: #d32f2f;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+      }
+  
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+      }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="https://www.cordemariamataro.cat/">
+        <img src="images/logo_corazon_de_maria.png" alt="Logo Cor de Maria" style="height: 50px;">
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Contacte</h1>
+    <form action="/submit-contacte" method="POST">
+      <div class="form-group">
+        <label for="nom">Nom complet</label>
+        <input type="text" class="form-control" id="nom" name="nom" required placeholder="Escriu el teu nom complet">
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Número de telèfon</label>
+        <input type="tel" class="form-control" id="telefon" name="telefon" required placeholder="Escriu el teu número de telèfon">
+      </div>
+
+      <div class="form-group">
+        <label for="correu">Correu electrònic</label>
+        <input type="email" class="form-control" id="correu" name="correu" required placeholder="Escriu el teu correu electrònic">
+      </div>
+
+      <div class="form-group">
+        <label for="missatge">Missatge</label>
+        <textarea class="form-control" id="missatge" name="missatge" rows="4" required placeholder="Escriu el teu missatge"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Colla Gegantera Cor de Maria. Tots els drets reservats.</p>
+  </footer>
+
+</body>
+</html>
