@@ -1,3 +1,3 @@
 # Colla-gegantera-web-project
-Una web para la colla gegantera del Cor de Maria, no tiene imagenes por derechos de autor. Subire un video para que se vea visualmente con imagenes
+Una web para la colla gegantera del Cor de Maria, no tiene imagenes por derechos de autor. Subire un video para que se vea visualmente con imagenes, varios submenus, nuevas configuraciones avanzadas que no estan adjuntas al código para evitar copias y mal uso. Uso las tecnologias MongoDB, Node, React y algunas de sus otras extensiones para el uso que le daran los usuarios. Usa otras tecnologias como Html, Css y Js, decidi usar Schemas para crear la base con MongoDB y no SQL con PHP ya que queria evitar el menor uso de lenguajes variados y poco compatibles para mejorar y dar un mejor rendimiento a la aplicacion web.
 ![Captura de pantalla 2025-05-12 230215](https://github.com/user-attachments/assets/b5d9be3e-9b0c-4154-9ffd-d0afd4b02837)
